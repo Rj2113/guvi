@@ -30,6 +30,7 @@ Your Mobile: <%= user.getMobile() %></h3>
 <h3>
 Your Email: <%= user.getEmail() %> </h3>
 
-<button><a href="LogoutServlet">Log Out</a></button>
+<button><a href="LogoutServlet">Log Out</a></button><br>
+<button><a href="edit.jsp">Update</a></button>
     </div></div>    </body>
 </html>

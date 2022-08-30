@@ -30,6 +30,28 @@ public class UserDatabase {
         }
         return set;
     }
+     public boolean updateUser(user user){
+        boolean set =false ;
+        try{
+            //Insert register data to database
+            String query = "UPDATE user SET name=?,mobile=?,email=?,password=? where id= ? ";
+           
+           PreparedStatement ptt = this.con.prepareStatement(query);
+           ptt.setString(1, user.getName());
+           ptt.setString(2, user.getMobile());
+           ptt.setString(3, user.getEmail());
+           ptt.setString(4, user.getPassword());
+           ptt.setString(5, user.getId1());
+          
+
+           
+           ptt.executeUpdate();
+           set = true;
+        }catch(Exception e){
+           e.printStackTrace();
+        }
+        return set;
+    }
     public user logUser(String email, String pass){
         user usr=null;
         try{

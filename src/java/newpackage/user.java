@@ -7,6 +7,7 @@
 
 public class user {
     int id;
+    String id1;
     String name;
     String email;
     String password;
@@ -16,6 +17,16 @@ public class user {
 
     public user(int id, String name,String mobile, String email,String password) {
         this.id = id;
+        this.name = name;
+        this.email = email;
+        this.mobile = mobile;
+     
+              
+        this.password = password;
+      
+    }
+    public user(String id, String name,String mobile, String email,String password) {
+        this.id1 = id;
         this.name = name;
         this.email = email;
         this.mobile = mobile;
@@ -48,6 +59,13 @@ public class user {
 
     public void setId(int id) {
         this.id = id;
+    }
+     public String getId1() {
+        return id1;
+    }
+
+    public void setId1(String id1) {
+        this.id1 = id1;
     }
 
     public String getName() {
